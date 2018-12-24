@@ -13,7 +13,6 @@ plain='\033[0m'
 
 #更新内核
 centos_update_kernel(){
-
     yum -y install epel-release
     sed -i "0,/enabled=0/s//enabled=1/" /etc/yum.repos.d/epel.repo
     yum remove -y kernel-devel
