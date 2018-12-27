@@ -195,7 +195,12 @@ ubuntu_wireguard_remove(){
     apt autoremove -y wireguard resolvconf qrencode
     rm -rf /etc/wireguard/
     ifconfig wg0 down
-    echo "卸载完成"
+    read -p "完全卸载需要重启VPS,是否现在重启 ? [Y/n] :" yn
+	[ -z "${yn}" ] && yn="y"
+	if [[ $yn == [Yy] ]]; then
+		echo -e "VPS 重启中..."
+		reboot
+	fi
 }
 
 #debian安装wireguard
@@ -255,7 +260,12 @@ debian_wireguard_remove(){
     apt autoremove -y wireguard resolvconf qrencode
     rm -rf /etc/wireguard/
     ifconfig wg0 down
-    echo "卸载完成"
+    read -p "完全卸载需要重启VPS,是否现在重启 ? [Y/n] :" yn
+	[ -z "${yn}" ] && yn="y"
+	if [[ $yn == [Yy] ]]; then
+		echo -e "VPS 重启中..."
+		reboot
+	fi
 }
 
 #显示客户端二维码
