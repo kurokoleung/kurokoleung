@@ -1,13 +1,11 @@
-﻿## Th1s 1s a rep0 ab0ut h3cking scr1pts
+﻿# Th1s 1s a rep0 ab0ut h3cking scr1pts
 
 # shodan
 
 调用shodan api 统计设备数量
-
 shodancount.py <search query>
 
 调用shodan api 搜索设备
-
 shodansearch.py <search query>
 
 # SMBLoris 通过smb对Windows服务器实施DOS攻击
@@ -44,4 +42,4 @@ nc -lvp 1234
 
 php php-reverse-shell.php
 
-## Hope you enjoy ^_^
+# Hope you enjoy ^_^
