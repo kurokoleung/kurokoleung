@@ -7,7 +7,7 @@ conf.L3socket
 conf.L3socket=L3RawSocket
 
 i=IP()
-i.dst = "192.168.56.139"
+i.dst = "192.168.0.1"
 t = TCP()
 t.dport = 445
 
