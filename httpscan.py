@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 #coding:utf-8
-# Author: Zeroh
  
 import re
 import sys
