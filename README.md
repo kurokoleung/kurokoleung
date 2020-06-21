@@ -10,9 +10,9 @@ shodancount.py weblogic
 
 shodansearch.py weblogic
 
-# LPE
+# privilege escalation
 
-里面放了常用的提权脚本
+收集了一些常用的提权脚本
 
 # webshell
 
