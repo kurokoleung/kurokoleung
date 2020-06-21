@@ -12,11 +12,11 @@ shodansearch.py weblogic
 
 # privilege escalation
 
-收集了一些常用的提权脚本
+收集了一些个人常用的提权脚本
 
 # webshell
 
-里面放了个人常用的webshell
+收集了一些个人常用的webshell
 
 # SMBLoris 通过smb服务对Windows服务器实施DOS攻击
 
