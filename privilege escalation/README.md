@@ -1,6 +1,14 @@
 # 收集了一些常用的提权工具
 
-# windwos提权工具(potato全家桶)
+## Auto-Root-Exploit
+
+https://github.com/nilotpalbiswas/Auto-Root-Exploit/tree/master/xtra
+
+# windwos提权工具
+
+## getshell
+
+https://github.com/klsfct/getshell
 
 ## potato
 https://github.com/foxglovesec/Potato
