@@ -1,28 +1,25 @@
-<!--
-Hi! This is an easter egg.
-Congratulations you found the first one!
--->
-
 [![Matrix SVG](https://raw.githubusercontent.com/rodrigograca31/rodrigograca31/master/matrix.svg)](https://www.youtube.com/watch?v=SDkAGkd4NLc)
 
-<!-- # 👀 Hi stranger! 👋🏻 -->
+# 渗透笔记
+  
+# CVE
 
-# 🤔 About me:
+测试过的CVE的poc
 
-- 🐇 Following the white rabbit
-- 🐈 Cat dad 😻
-- Professional 🐛 solver
-- 👨🏻‍💻 Full-Stack Developer
-- 💊 Coding the Matrix
-- 😍 Emoji lover
-- 🚀 One day I will see humans on Mars!
-- 🐇🥚 There's easter eggs in this profile...
+# shodan
 
-<!-- Watch this: https://www.youtube.com/watch?v=eC7xzavzEKY -->
+shodan相关脚本
 
----
+# privilege escalation
 
-👇🏻 Here is a list of the Open Source projects I work on: 👇🏻
+提权脚本
 
+# webshell
 
-⭐️ From [rodrigograca31](https://github.com/rodrigograca31)
+webshell
+
+# script
+
+渗透测试常用脚本
+
+# hope u enjoy :)
