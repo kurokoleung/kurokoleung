@@ -24,3 +24,5 @@ https://github.com/ohpe/juicy-potato
 https://github.com/ivanitlearning/Juicy-Potato-x86
 ## pipe potato
 https://github.com/daikerSec/pipePotato
+## bad potato
+https://github.com/BeichenDream/BadPotato

